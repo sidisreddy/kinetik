@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Kinetik is a fast order book based decentralized exchange on MegaETH, designed to match the centralized exchange experience."
+    />
+    <title>Kinetik | CEX-speed order books on MegaETH</title>
+    <link rel="icon" href="assets/kinetik-mark.png" type="image/png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Kinetik navigation">
+      <a class="brand" href="#top" aria-label="Kinetik home">
+        <img src="assets/kinetik-wordmark.png" alt="Kinetik" />
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#markets">Markets</a>
+        <a href="#performance">Performance</a>
+        <a href="#access">Access</a>
+      </nav>
+      <a class="header-action" href="#access">Request access</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-video" aria-hidden="true"></div>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Order book DEX on MegaETH</p>
+            <h1 id="hero-title">Kinetik</h1>
+            <p class="hero-subtitle">
+              A high-throughput decentralized exchange built for the speed,
+              precision, and familiarity of a centralized order book.
+            </p>
+            <div class="hero-actions" aria-label="Primary calls to action">
+              <a class="button primary" href="#access">Request early access</a>
+              <a class="button secondary" href="#markets">View market model</a>
+            </div>
+            <dl class="hero-metrics" aria-label="Kinetik performance metrics">
+              <div>
+                <dt>Throughput</dt>
+                <dd>Up to 100k TPS</dd>
+              </div>
+              <div>
+                <dt>Venue</dt>
+                <dd>MegaETH L1</dd>
+              </div>
+              <div>
+                <dt>Experience</dt>
+                <dd>CEX-grade UX</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="logo-marquee" aria-label="Kinetik brand mark">
+        <img src="assets/kinetik-mark.png" alt="" aria-hidden="true" />
+        <span>Built for traders who expect speed first.</span>
+      </section>
+
+      <section
+        class="section trading-preview"
+        id="markets"
+        aria-labelledby="markets-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Market structure</p>
+            <h2 id="markets-title">The order book traders already understand.</h2>
+          </div>
+          <p class="section-kicker">
+            Familiar market mechanics, decentralized settlement, and the
+            execution feel traders expect from a serious venue.
+          </p>
+        </div>
+        <div class="terminal-shell" aria-label="Live order book preview">
+          <div class="terminal-topbar">
+            <div class="pair-block">
+              <span class="pair-label">KIN / USDC</span>
+              <span class="pair-status">Continuous matching</span>
+            </div>
+            <div class="latency-pill">
+              <span class="pulse" aria-hidden="true"></span>
+              <span>12 ms</span>
+            </div>
+          </div>
+          <div class="market-strip" aria-label="Market summary">
+            <div>
+              <span>Last</span>
+              <strong id="last-price">42.168</strong>
+            </div>
+            <div>
+              <span>24h Vol</span>
+              <strong>$184.6M</strong>
+            </div>
+            <div>
+              <span>Spread</span>
+              <strong id="spread">0.004</strong>
+            </div>
+          </div>
+          <div class="book-grid">
+            <div class="book-head">
+              <span>Price</span>
+              <span>Size</span>
+              <span>Total</span>
+            </div>
+            <div class="book-rows asks" id="asks"></div>
+            <div class="mid-price">
+              <span id="mid-price">42.168</span>
+              <small>index synced</small>
+            </div>
+            <div class="book-rows bids" id="bids"></div>
+          </div>
+          <div class="execution-row">
+            <div>
+              <span>Matching engine</span>
+              <strong>Online</strong>
+            </div>
+            <div>
+              <span>Finality path</span>
+              <strong>MegaETH L1</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section split" aria-labelledby="edge-title">
+        <div>
+          <p class="eyebrow">Market structure</p>
+          <h2 id="edge-title">Built for liquidity without compromise.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-index">01</span>
+            <h3>Central limit order book</h3>
+            <p>
+              Familiar price-time priority with the controls active traders
+              need: bids, asks, depth, spreads, and fast execution feedback.
+            </p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-index">02</span>
+            <h3>Onchain settlement</h3>
+            <p>
+              Kinetik keeps the trading surface direct while MegaETH handles
+              the high-performance execution environment underneath.
+            </p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-index">03</span>
+            <h3>Low-friction liquidity</h3>
+            <p>
+              Designed for makers, takers, and builders who need responsive
+              markets without leaving decentralized rails.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="section performance"
+        id="performance"
+        aria-labelledby="performance-title"
+      >
+        <div class="section-heading">
+          <p class="eyebrow">Performance</p>
+          <h2 id="performance-title">A DEX that feels immediate.</h2>
+        </div>
+        <div class="performance-grid">
+          <div class="performance-stat">
+            <span>Peak target</span>
+            <strong>100k</strong>
+            <small>transactions per second</small>
+          </div>
+          <div class="performance-stat">
+            <span>Trading feel</span>
+            <strong>CEX</strong>
+            <small>speed, depth, and control</small>
+          </div>
+          <div class="performance-stat">
+            <span>Network</span>
+            <strong>MegaETH</strong>
+            <small>high-throughput L1 environment</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="section access" id="access" aria-labelledby="access-title">
+        <div class="access-copy">
+          <p class="eyebrow">Private launch</p>
+          <h2 id="access-title">Get closer to the first Kinetik markets.</h2>
+          <p>
+            Join the early access list for product updates, market previews,
+            and builder integrations as Kinetik moves toward launch.
+          </p>
+        </div>
+        <form class="access-form" aria-label="Request Kinetik early access">
+          <label for="email">Email</label>
+          <div class="input-row">
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@domain.com"
+              autocomplete="email"
+              required
+            />
+            <button type="submit">Request access</button>
+          </div>
+          <p class="form-note" id="form-note" role="status">
+            Priority access for market makers, active traders, and ecosystem
+            builders.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <img src="assets/kinetik-wordmark.png" alt="Kinetik" />
+      <span>Order book liquidity for MegaETH.</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
