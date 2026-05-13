@@ -42,8 +42,8 @@
             <p class="eyebrow">Order book DEX on MegaETH</p>
             <h1 id="hero-title">Kinetik</h1>
             <p class="hero-subtitle">
-              A high-throughput decentralized exchange built for the speed,
-              precision, and familiarity of a centralized order book.
+              A fully onchain central limit order book built for the speed,
+              precision, and deterministic execution of a serious trading venue.
             </p>
             <div class="hero-actions" aria-label="Primary calls to action">
               <a class="button primary" href="#access">Request early access</a>
@@ -83,8 +83,8 @@
             <h2 id="markets-title">The order book traders already understand.</h2>
           </div>
           <p class="section-kicker">
-            Familiar market mechanics, decentralized settlement, and the
-            execution feel traders expect from a serious venue.
+            Matching, order queues, and collateral all live in one smart
+            contract, with trades executed directly against the EVM ledger.
           </p>
         </div>
         <div class="terminal-shell" aria-label="Live order book preview">
@@ -140,32 +140,33 @@
 
       <section class="section split" aria-labelledby="edge-title">
         <div>
-          <p class="eyebrow">Market structure</p>
-          <h2 id="edge-title">Built for liquidity without compromise.</h2>
+          <p class="eyebrow">Execution architecture</p>
+          <h2 id="edge-title">A CLOB implemented entirely as onchain state.</h2>
         </div>
         <div class="feature-grid">
           <article class="feature-card">
             <span class="feature-index">01</span>
-            <h3>Central limit order book</h3>
+            <h3>Single-contract matching</h3>
             <p>
-              Familiar price-time priority with the controls active traders
-              need: bids, asks, depth, spreads, and fast execution feedback.
+              The matching algorithm, order queue, and user collateral reside
+              inside one smart contract, keeping the hot path compact.
             </p>
           </article>
           <article class="feature-card">
             <span class="feature-index">02</span>
-            <h3>Onchain settlement</h3>
+            <h3>Deterministic ordering</h3>
             <p>
-              Kinetik keeps the trading surface direct while MegaETH handles
-              the high-performance execution environment underneath.
+              Trades execute against the EVM ledger with no offchain matching
+              engine, no federated sequencer, and no probabilistic ordering.
             </p>
           </article>
           <article class="feature-card">
             <span class="feature-index">03</span>
-            <h3>Low-friction liquidity</h3>
+            <h3>MegaETH-native throughput</h3>
             <p>
-              Designed for makers, takers, and builders who need responsive
-              markets without leaving decentralized rails.
+              Kinetik uses MegaETH's expanded contract bytecode limit, high
+              block rate, and a single storage namespace to avoid cross-contract
+              calls during matching.
             </p>
           </article>
         </div>
@@ -230,8 +231,20 @@
     </main>
 
     <footer class="site-footer">
-      <img src="assets/kinetik-wordmark.png" alt="Kinetik" />
-      <span>Order book liquidity for MegaETH.</span>
+      <div class="footer-product">
+        <img src="assets/kinetik-wordmark.png" alt="Kinetik" />
+        <span>Order book liquidity for MegaETH.</span>
+      </div>
+      <a
+        class="builder-link"
+        href="https://spaceharpoon.com"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Built by Space Harpoon"
+      >
+        <span>Built by spaceharpoon</span>
+        <img src="sh_logo.png" alt="Space Harpoon" />
+      </a>
     </footer>
 
     <script src="script.js"></script>
